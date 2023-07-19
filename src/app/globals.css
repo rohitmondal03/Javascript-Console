@@ -2,26 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  @apply m-0 p-0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* body {
+  margin: 0;
+} */
+
+.console * {
+  font-family: monospace;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.console {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #111111;
+}
+
+.console-history {
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.console-input-log,
+.console-output-log {
+  box-sizing: border-box;
+  padding: 6px 12px;
+  font-size: 1.5rem;
+}
+
+.console-input-log:hover,
+.console-output-log:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.console-input-log {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.console-output-log {
+  color: #00ffcc;
+}
+
+.console-input {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 12px;
+  outline: none;
+  border: none;
+  border-top: 1px solid #5c5c5c;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.2s;
+}
+
+.console-input:hover,
+.console-input:focus {
+  background: rgba(255, 255, 255, 0.07);
 }
