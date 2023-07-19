@@ -1,6 +1,4 @@
 # Javascript Console Project #
-<br>
-<br>
 
->[Github Link](https://youtube.com) <br>
+>[Github Link](https://github.com/rohitmondal03/Javascript-Console) <br>
 >[Deployed Link](https://youtube.com)
